@@ -1,0 +1,274 @@
+
+/* ========================================
+   MEU CHAT IA - DARK PREMIUM
+   ======================================== */
+
+:root {
+    --bg: #101014;
+    --sidebar: #0C0B11;
+    --surface: #191820;
+    --surface-hover: #24202F;
+    --purple: #8B5CF6;
+    --purple-light: #A78BFA;
+    --lilac: #DDD6FE;
+    --text: #F7F5FC;
+    --muted: #A5A0B2;
+    --border: #30283D;
+}
+
+/* Aplicacao */
+
+.stApp {
+    color: var(--text);
+}
+
+[data-testid="stHeader"] {
+    background: transparent;
+}
+
+#MainMenu,
+footer {
+    visibility: hidden;
+}
+
+/* Barra lateral */
+
+[data-testid="stSidebar"] {
+    background: var(--sidebar);
+    border-right: 1px solid var(--border);
+}
+
+[data-testid="stSidebar"] > div:first-child {
+    padding-top: 1.2rem;
+}
+
+/* Marca da barra lateral */
+
+.sidebar-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 10px;
+}
+
+.brand-symbol {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    border-radius: 14px;
+    color: white;
+    font-size: 28px;
+    background: linear-gradient(
+        135deg,
+        #A78BFA,
+        #6D28D9
+    );
+    box-shadow: 0 0 24px #8B5CF633;
+}
+
+.brand-name {
+    color: var(--text);
+    font-size: 19px;
+    font-weight: 750;
+    letter-spacing: -0.5px;
+}
+
+.brand-caption {
+    color: var(--muted);
+    font-size: 12px;
+    margin-top: 3px;
+}
+
+/* Cabecalho principal */
+
+.main-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 30px;
+    font-weight: 800;
+    letter-spacing: -1px;
+    color: var(--text);
+}
+
+.main-symbol {
+    color: var(--purple-light);
+    text-shadow: 0 0 20px #8B5CF666;
+}
+
+.main-subtitle {
+    color: var(--muted);
+    font-size: 14px;
+    margin-top: 6px;
+}
+
+/* Area principal */
+
+.main .block-container {
+    max-width: 1000px;
+    padding-top: 1.8rem;
+    padding-bottom: 4rem;
+}
+
+/* Tela de boas-vindas */
+
+.welcome-card {
+    margin: 45px auto 30px;
+    padding: 38px 24px;
+    text-align: center;
+    background: linear-gradient(
+        145deg,
+        #21172F,
+        #15131C 65%,
+        #111014
+    );
+    border: 1px solid #493568;
+    border-radius: 24px;
+    box-shadow: 0 15px 50px #00000022;
+}
+
+.welcome-symbol {
+    color: var(--purple-light);
+    font-size: 46px;
+    text-shadow: 0 0 28px #8B5CF688;
+}
+
+.welcome-card h2 {
+    color: var(--text);
+    font-size: 27px;
+    font-weight: 750;
+    margin: 10px 0;
+}
+
+.welcome-card p {
+    color: var(--muted);
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+/* Titulo da conversa */
+
+.chat-title {
+    margin: 18px 0;
+    color: var(--lilac);
+    font-size: 14px;
+    font-weight: 600;
+}
+
+/* Mensagens */
+
+[data-testid="stChatMessage"] {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    padding: 16px;
+    margin-bottom: 14px;
+}
+
+[data-testid="stChatMessage"] p {
+    color: var(--text);
+    line-height: 1.75;
+}
+
+/* Entrada de texto */
+
+[data-testid="stChatInput"] {
+    background: var(--surface);
+    border: 1px solid #584078;
+    border-radius: 18px;
+}
+
+[data-testid="stChatInput"]:focus-within {
+    border-color: var(--purple-light);
+    box-shadow: 0 0 0 2px #8B5CF622;
+}
+
+[data-testid="stChatInput"] textarea {
+    color: var(--text);
+}
+
+/* Botoes */
+
+.stButton > button {
+    min-height: 42px;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    background: var(--surface);
+    color: var(--text);
+    transition: all 0.2s ease;
+}
+
+.stButton > button:hover {
+    border-color: var(--purple);
+    background: var(--surface-hover);
+    color: white;
+}
+
+/* Botao principal */
+
+.stButton > button[kind="primary"] {
+    background: linear-gradient(
+        135deg,
+        #8B5CF6,
+        #6D28D9
+    );
+    color: white;
+    border: 1px solid #A78BFA;
+    font-weight: 650;
+}
+
+.stButton > button[kind="primary"]:hover {
+    background: #7C3AED;
+    border-color: #C4B5FD;
+}
+
+/* Seletor e campos */
+
+[data-baseweb="select"] > div {
+    background: var(--surface);
+    border-color: var(--border);
+    border-radius: 10px;
+}
+
+[data-testid="stTextInput"] input,
+[data-testid="stTextArea"] textarea {
+    background: var(--surface);
+    color: var(--text);
+    border-color: var(--border);
+    border-radius: 10px;
+}
+
+/* Separadores */
+
+hr {
+    border-color: var(--border);
+}
+
+/* Alertas */
+
+[data-testid="stAlert"] {
+    border-radius: 12px;
+}
+
+/* Layout para celular */
+
+@media (max-width: 650px) {
+    .main .block-container {
+        padding: 1rem 0.8rem 3rem;
+    }
+
+    .main-brand {
+        font-size: 23px;
+    }
+
+    .welcome-card {
+        margin-top: 25px;
+        padding: 26px 16px;
+    }
+
+    .welcome-card h2 {
+        font-size: 22px;
+    }
+}
